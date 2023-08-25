@@ -109,8 +109,7 @@ class ControllerSocios
     {
       $codSocio = $_GET["codSocio"];
       $confirmarUsoCosto = ControllerCostos::ctrVerificarUsoSocio($codSocio);
-      $confirmarUsoHistoria = ControllerHistorias::ctrVerificarUsoSocio($codSocio);
-      if(($confirmarUsoCosto["TotalUso"] > 0) || ($confirmarUsoHistoria["TotalUso"] > 0))
+      if($confirmarUsoCosto["TotalUso"] > 0)
       {
         echo '
           <script>

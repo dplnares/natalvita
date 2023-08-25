@@ -153,7 +153,7 @@
             <!-- Tipo de socio -->
             <div class="form-group">
               <label for="editarTipoSocio" class="col-form-label">Tipo de Socio:</label>
-              <select class="form-control" name="editarTipoSocio">
+              <select class="form-control" name="editarTipoSocio" id="editarTipoSocio">
                 <?php
                   $tiposSocio = ControllerSocios::ctrMostrarTiposSocio();
                   foreach ($tiposSocio as $key => $value)
@@ -167,7 +167,7 @@
             <!-- Tipo de identificacion -->
             <div class="form-group">
               <label for="editarTipoIdentificacion" class="col-form-label">Tipo de Identificacion:</label>
-              <select class="form-control" name="editarTipoIdentificacion">
+              <select class="form-control" name="editarTipoIdentificacion" id="editarTipoIdentificacion">
                 <?php
                   $tiposIdentificacion = ControllerSocios::ctrMostrarTiposIdentificacion();
                   foreach ($tiposIdentificacion as $key => $value)

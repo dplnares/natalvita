@@ -52,7 +52,7 @@ class ModelSocios
   //  Mostrar los datos para editar a un socio
   public static function mdlMostrarDatosEditar($tabla, $codSocio)
   {
-    $statement = Conexion::conn()->prepare("SELECT tba_socio.IdSocio, tba_socio.NombreSocio, tba_socio.IdTipoIdentificacion, tba_socio.Identificacion, tba_tipoidentificacion.NombreTipoIdentificacion FROM $tabla INNER JOIN tba_tipoidentificacion ON tba_socio.IdTipoIdentificacion = tba_tipoidentificacion.IdTipoIdentificacion WHERE tba_socio.IdSocio = $codSocio");
+    $statement = Conexion::conn()->prepare("SELECT tba_socio.IdSocio, tba_socio.NombreSocio, tba_socio.IdTipoIdentificacion, tba_socio.Identificacion, tba_socio.IdTipoSocio, tba_tipoidentificacion.NombreTipoIdentificacion, tba_tiposocio.NombreTipoSocio FROM $tabla INNER JOIN tba_tipoidentificacion ON tba_socio.IdTipoIdentificacion = tba_tipoidentificacion.IdTipoIdentificacion INNER JOIN tba_tiposocio ON tba_socio.IdTipoSocio = tba_tiposocio.IdTipoSocio WHERE tba_socio.IdSocio = $codSocio");
     $statement -> execute();
     return $statement -> fetch();
   }

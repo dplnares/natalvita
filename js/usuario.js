@@ -16,7 +16,7 @@ $(".table").on("click", ".btnEditarUsuario", function () {
     success: function (respuesta) {
       $("#editarNombre").val(respuesta["NombreUsuario"]);
       $("#editarCorreo").val(respuesta["CorreoUsuario"]);
-      $("#editarPerfil").val(respuesta["NombrePerfil"]);
+      $("#editarPerfil").val(respuesta["IdPerfilUsuario"]);
       $("#codUsuario").val(respuesta["IdUsuario"]);
     }
   });

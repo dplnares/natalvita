@@ -15,7 +15,7 @@ class PDFCostoSelect extends TFPDF
   function Header()
   {
     // Logo
-    $this->Image('../../view/img/logo-denta.png', 155, 8, 35);
+    $this->Image('../../view/img/logo-without.png', 155, 8, 35);
     // Arial bold 15
     $this->AddFont('DejaVu','','DejaVuSansCondensed.ttf',true);
     
@@ -97,7 +97,7 @@ $pdf->Cell(80,10,'Datos Generales Costo',0,'L');
 $pdf->SetFont('Arial','B',10);
 $pdf->Cell(35,8,'Centro de costos :',0);
 $pdf->SetFont('DejaVu', '', 10);
-$pdf->Cell(45,8,$datosCabeceraCosto["DescripcionCentro"],0);
+$pdf->Cell(60,8,$datosCabeceraCosto["DescripcionCentro"],0);
 $pdf->SetFont('Arial','B',10);
 $pdf->Cell(22,8,'Mes Costo :',0);
 $pdf->SetFont('DejaVu', '', 10);

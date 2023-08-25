@@ -145,7 +145,7 @@
             <!-- Perfil -->
             <div class="form-group">
               <label for="editarPerfil" class="col-form-label">Perfil:</label>
-              <select class="form-control" name="editarPerfil">
+              <select class="form-control" name="editarPerfil" id="editarPerfil">
                 <?php
                   $perfiles = ControllerUsuarios::ctrMostrarPerfiles();
                   foreach ($perfiles as $key => $value)

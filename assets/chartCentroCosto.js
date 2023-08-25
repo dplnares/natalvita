@@ -65,8 +65,8 @@ var chartCentrCostos = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 6000,
-          maxTicksLimit: 5
+          max: 2000,
+          maxTicksLimit: 6
         },
         gridLines: {
           display: true

@@ -15,7 +15,8 @@ $(".table").on("click", ".btnEditarSocio", function () {
 
     success: function (respuesta) {
       $("#editarNombreSocio").val(respuesta["NombreSocio"]);
-      $("#editarTipoIdentificacion").val(respuesta["NombreTipoIdentificacion"]);
+      $("#editarTipoSocio").val(respuesta["IdTipoSocio"]);
+      $("#editarTipoIdentificacion").val(respuesta["IdTipoIdentificacion"]);
       $("#editarNumeroIdentificacion").val(respuesta["Identificacion"]);
       $("#codSocio").val(respuesta["IdSocio"]);
     }
